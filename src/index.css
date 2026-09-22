@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+body {
+  @apply bg-mist text-ink font-body antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+.section-label {
+  @apply text-[13px] font-semibold tracking-wide text-cyan;
+}
+
+.card {
+  @apply bg-white border border-line rounded-xl shadow-card;
+}
+
+.card-glow {
+  @apply bg-white border border-cyan/20 rounded-xl shadow-card backdrop-blur-sm;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 bg-clinical-500 hover:bg-clinical-600 text-white font-medium px-5 py-3 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-clinical-400 focus-visible:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 bg-white hover:bg-mist text-ink font-medium px-5 py-3 rounded-lg border border-line transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-clinical-400;
+}
+
+.demo-tag {
+  @apply inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-caution bg-amber-50 border border-amber-200 px-2 py-1 rounded-md;
+}
+
+/* Glowing borders for futuristic look */
+.glow-border {
+  @apply border border-cyan/30 hover:border-cyan/60 hover:shadow-glow-cyan transition-all;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-cyan via-blue-300 to-purple bg-clip-text text-transparent;
+}
+
+::selection { background: #CFEFF7; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
